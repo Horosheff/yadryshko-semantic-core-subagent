@@ -1,5 +1,9 @@
 # Семантическое ядро субагент (ЯДрышко)
 
+[![Установить в Cursor](https://img.shields.io/badge/Установить%20в%20Cursor-ЯДрышко-000000?style=for-the-badge&logo=cursor)](#-установить-в-cursor)
+[![MCP--KV Wordstat](https://img.shields.io/badge/MCP--KV-Wordstat-2563eb?style=for-the-badge)](https://mcp-kv.ru/docs/wordstat-mcp-setup)
+[![GitHub](https://img.shields.io/badge/GitHub-repository-111111?style=for-the-badge&logo=github)](https://github.com/Horosheff/yadryshko-semantic-core-subagent)
+
 `ЯДрышко` (`Core`) — готовый Cursor sub-agent, который собирает полноценное семантическое ядро сайта: Wordstat, очищенные запросы, кластеры, URL-карту, контент-брифы, GEO/AI-рекомендации, roadmap и большой русский HTML-отчёт.
 
 Главная идея: пользователь даёт сайт, а агент создаёт пакет исследования, который можно отдать SEO-специалисту, редактору, владельцу бизнеса или разработчику.
@@ -8,7 +12,27 @@
 /core https://example.ru регион Россия, цель: заявки, приоритет Яндекс
 ```
 
-## Что создаёт Core
+## 🚀 Установить в Cursor
+
+Откройте терминал **в корне своего проекта** и выполните одну команду.
+
+### Windows / PowerShell
+
+```powershell
+irm https://raw.githubusercontent.com/Horosheff/yadryshko-semantic-core-subagent/main/install.ps1 | iex
+```
+
+### macOS / Linux / Git Bash
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Horosheff/yadryshko-semantic-core-subagent/main/install.sh | bash
+```
+
+После установки перезапустите Cursor или сделайте `Reload Window`, если `/core` не появился сразу.
+
+## Что пользователь получит на выходе
+
+После запуска Core создаёт отдельную папку исследования:
 
 В папке проекта появляется:
 
@@ -16,17 +40,28 @@
 research/semantic-core-runs/<site>-<date>/
 ```
 
-Внутри:
+| Файл | Что внутри | Для кого |
+|---|---|---|
+| `index.html` | Большой русский отчёт “всё в одном”: выводы, таблицы, риски, рекомендации, план 7/30/90 дней | Владелец, SEO, редактор, клиент |
+| `semantic-core.xlsx` | Единая Excel-книга со всеми листами исследования | SEO, аналитик, команда |
+| `05-clusters.csv` | Кластеры: главный запрос, интент, частотность, URL, приоритет | SEO |
+| `06-url-map.csv` | Что создать, что обновить, куда вести внутренние ссылки | SEO + разработчик |
+| `07-content-briefs.md` | ТЗ для P0/P1 страниц: H1, title, description, блоки, FAQ/GEO | Редактор |
+| `12-implementation-roadmap.md` | Пошаговый план внедрения по спринтам | Владелец проекта |
+| `09-quality-report.md` | Ограничения, риски, что нужно проверить вручную | SEO + аналитик |
 
-- `index.html` — главный русский отчёт “всё в одном”.
-- `semantic-core.xlsx` — единая Excel-книга для Excel/Google Sheets.
-- `03-wordstat-raw.csv` — сырые данные Wordstat.
-- `04-keywords-clean.csv` — очищенные запросы.
-- `05-clusters.csv` — кластерная матрица.
-- `06-url-map.csv` — карта страниц.
-- `07-content-briefs.md` — ТЗ для P0/P1 страниц.
-- `12-implementation-roadmap.md` — план внедрения.
-- дополнительные Markdown-отчёты по брифу, сайту, SERP/GEO и качеству.
+### Внутри `index.html` человек увидит
+
+- что уже хорошо на сайте;
+- что мешает росту;
+- какие темы дают спрос;
+- какие страницы нужно создать;
+- какие страницы нужно обновить;
+- где риск каннибализации;
+- что проверить в Яндексе, GSC и Яндекс.Вебмастере;
+- какие задачи делать в ближайшие 7, 30 и 90 дней.
+
+> Важно: Core не выдумывает частотности. Для реальных Wordstat-данных нужно подключить MCP-KV Wordstat.
 
 ## Что внутри репозитория
 
