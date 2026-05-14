@@ -22,6 +22,7 @@ README.md
 07-content-briefs.md
 08-serp-geo-notes.md
 09-quality-report.md
+10-todo.md
 12-implementation-roadmap.md
 ```
 
@@ -29,7 +30,8 @@ README.md
 
 1. `index.html` — открыть первым. Здесь всё в одном месте.
 2. `semantic-core.xlsx` — таблицы для Excel/Google Sheets.
-3. `12-implementation-roadmap.md` — что делать дальше.
+3. `10-todo.md` — короткий список задач: сделано, проверить, сделать дальше.
+4. `12-implementation-roadmap.md` — подробный план внедрения.
 
 ## Главные файлы для SEO/редактора
 
@@ -37,6 +39,7 @@ README.md
 2. `06-url-map.csv`
 3. `07-content-briefs.md`
 4. `09-quality-report.md`
+5. `10-todo.md`
 
 ## Что должно быть в конце HTML
 

@@ -44,6 +44,7 @@ README.md
 07-content-briefs.md
 08-serp-geo-notes.md
 09-quality-report.md
+10-todo.md
 12-implementation-roadmap.md
 ```
 
@@ -99,7 +100,42 @@ cluster_id,cluster_name,primary_query,secondary_queries,intent,frequency_total,r
 target_url,url_status,page_type,cluster_ids,primary_queries,recommended_h1,title_draft,description_draft,internal_links_from,internal_links_to,implementation_task,owner_hint,notes
 ```
 
-## 5. HTML-отчёт
+## 5. TODO-файл
+
+`10-todo.md` — короткий управленческий список задач после исследования.
+
+Обязательная структура:
+
+```markdown
+# 10. TODO после исследования
+
+## Уже сделано
+
+- [x] ...
+
+## Проверить вручную
+
+- [ ] ...
+
+## Сделать дальше
+
+| Приоритет | Задача | Ответственный | Файл/URL | Комментарий |
+|---|---|---|---|---|
+
+## Backlog
+
+- [ ] ...
+```
+
+Правила:
+
+- писать на русском;
+- использовать понятные роли: SEO, редактор, разработчик, аналитик, владелец;
+- разделять `проверить` и `сделать`;
+- P0/P1 задачи должны быть конкретными;
+- не дублировать весь roadmap, а дать короткий список управления работой.
+
+## 6. HTML-отчёт
 
 `index.html` — главный файл для человека. Он должен быть на русском и включать:
 
@@ -123,7 +159,7 @@ target_url,url_status,page_type,cluster_ids,primary_queries,recommended_h1,title
 python scripts/build_core_html_report.py <run-folder>
 ```
 
-## 6. Excel
+## 7. Excel
 
 `semantic-core.xlsx` нужен для Excel/Google Sheets.
 
@@ -133,7 +169,7 @@ python scripts/build_core_html_report.py <run-folder>
 python scripts/build_semantic_core_xlsx.py <run-folder>
 ```
 
-## 7. Чек-лист перед завершением
+## 8. Чек-лист перед завершением
 
 - [ ] Бизнес-границы зафиксированы.
 - [ ] Регион указан или допущение записано.
@@ -145,9 +181,10 @@ python scripts/build_semantic_core_xlsx.py <run-folder>
 - [ ] HTML-отчёт большой и на русском.
 - [ ] HTML заканчивается рекомендациями.
 - [ ] `semantic-core.xlsx` существует.
+- [ ] `10-todo.md` существует и понятен владельцу проекта.
 - [ ] Roadmap существует.
 
-## 8. Запрещено
+## 9. Запрещено
 
 - выдумывать частотности;
 - прятать ошибки MCP;

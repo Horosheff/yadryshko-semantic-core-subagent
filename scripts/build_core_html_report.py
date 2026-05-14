@@ -136,6 +136,7 @@ def build(run_dir: Path) -> str:
         "07-content-briefs.md",
         "08-serp-geo-notes.md",
         "09-quality-report.md",
+        "10-todo.md",
         "12-implementation-roadmap.md",
     ]
     file_links = "".join(
@@ -169,6 +170,7 @@ def build(run_dir: Path) -> str:
         ("Контент-брифы", "07-content-briefs.md"),
         ("SERP / GEO заметки", "08-serp-geo-notes.md"),
         ("Отчёт качества", "09-quality-report.md"),
+        ("TODO", "10-todo.md"),
         ("План внедрения", "12-implementation-roadmap.md"),
     ]
     md_sections = []

@@ -25,6 +25,7 @@ SOURCES = [
     ("Content Briefs", "07-content-briefs.md"),
     ("SERP GEO Notes", "08-serp-geo-notes.md"),
     ("Quality Report", "09-quality-report.md"),
+    ("TODO", "10-todo.md"),
     ("Roadmap", "12-implementation-roadmap.md"),
 ]
 
