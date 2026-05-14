@@ -56,7 +56,48 @@ sub-agent-core/
 
 ## Установка в свой проект
 
-### Вариант 1. Вручную
+### Самый простой вариант: одна команда по ссылке
+
+Откройте терминал **в корне проекта**, куда нужно установить sub-agent, и выполните:
+
+#### Windows / PowerShell
+
+```powershell
+irm https://raw.githubusercontent.com/Horosheff/yadryshko-semantic-core-subagent/main/install.ps1 | iex
+```
+
+#### macOS / Linux / Git Bash
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Horosheff/yadryshko-semantic-core-subagent/main/install.sh | bash
+```
+
+После установки в проекте появятся:
+
+```text
+.cursor/agents/core.md
+docs/
+scripts/
+templates/
+```
+
+Если `/core` не появился сразу, перезапустите Cursor или выполните reload window.
+
+### Установка по ссылке в конкретную папку
+
+#### Windows / PowerShell
+
+```powershell
+$env:YADRYSHKO_TARGET="C:\path\to\your\project"; irm https://raw.githubusercontent.com/Horosheff/yadryshko-semantic-core-subagent/main/install.ps1 | iex
+```
+
+#### macOS / Linux / Git Bash
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Horosheff/yadryshko-semantic-core-subagent/main/install.sh | bash -s -- /path/to/your/project
+```
+
+### Вариант вручную
 
 Скопируйте в корень своего проекта:
 
@@ -73,7 +114,7 @@ templates/
 /core https://example.ru регион Россия, цель заявки
 ```
 
-### Вариант 2. PowerShell
+### Установка из уже скачанного репозитория: PowerShell
 
 Из папки этого репозитория:
 
@@ -81,7 +122,7 @@ templates/
 .\scripts\install.ps1 -Target "C:\path\to\your\project"
 ```
 
-### Вариант 3. Bash/macOS/Linux
+### Установка из уже скачанного репозитория: Bash/macOS/Linux
 
 ```bash
 ./scripts/install.sh /path/to/your/project

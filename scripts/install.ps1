@@ -4,6 +4,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 if (-not (Test-Path $Target)) {
   New-Item -ItemType Directory -Path $Target | Out-Null
@@ -23,4 +24,4 @@ Copy-Item -Force (Join-Path $Root "scripts\build_semantic_core_xlsx.py") (Join-P
 Copy-Item -Force (Join-Path $Root "templates\*.md") (Join-Path $Target "templates")
 
 Write-Host "Core installed into $Target"
-Write-Host "Use in Cursor: /core https://example.ru регион Россия, цель заявки"
+Write-Host "Use in Cursor: /core https://example.ru region Russia, goal leads"
