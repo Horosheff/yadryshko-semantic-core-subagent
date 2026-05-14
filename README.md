@@ -1,5 +1,7 @@
 # Семантическое ядро субагент (ЯДрышко)
 
+![ЯДрышко — субагент для семантического ядра](assets/yadryshko-cover.png)
+
 [![Установить в Cursor](https://img.shields.io/badge/Установить%20в%20Cursor-ЯДрышко-000000?style=for-the-badge&logo=cursor)](#-установить-в-cursor)
 [![MCP--KV Wordstat](https://img.shields.io/badge/MCP--KV-Wordstat-2563eb?style=for-the-badge)](https://mcp-kv.ru/docs/wordstat-mcp-setup)
 [![GitHub](https://img.shields.io/badge/GitHub-repository-111111?style=for-the-badge&logo=github)](https://github.com/Horosheff/yadryshko-semantic-core-subagent)
